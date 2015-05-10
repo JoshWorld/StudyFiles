@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>문서 객체들에 대한 이벤트 처리</title>
+<script>
+window.onload = function () {
+	document.getElementById("confirmButton").onclick = function(){
+		checkAnswer(document.theForm);
+	}
+}
+
+function checkAnswer(form) {
+    var userAnswer = form.txtAnswer.value;
+    if (userAnswer == "") {
+        alert("정답을 입력하세요.");
+        form.txtAnswer.focus();
+    } else if (userAnswer == "a" || userAnswer == "A") {
+        alert("정답입니다.");
+    } else {
+        alert("정답이 아닙니다.");
+        form.txtAnswer.focus();
+        form.txtAnswer.select();
+    }
+}
+</script> 
+</head>
+<body>
+<h2>Form 관련 이벤트 처리</h2>
+현재 배우고 있는 과목은 무엇입니까?<br/>
+(A) 자바스크립트 (B) 자바 (C) JSP (D) ASP<br/>
+
+<form name="theForm">
+    정답 : <input type="text" name="txtAnswer">
+    <input type="button" value="확인" id="confirmButton">
+</form>
+</body>
+</html>

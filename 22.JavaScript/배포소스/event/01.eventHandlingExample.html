@@ -1,0 +1,20 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>문서 객체들에 대한 이벤트 처리</title>
+<script>
+function whenClick(e) {
+    alert(e.type + '이벤트 발생');
+}
+</script>
+</head>
+<body> 
+<h2>인라인 이벤트 처리 모델</h2>
+<table border="1" width="200" onclick="this.style.background='yellow'">
+  <tr>
+    <td>선택<td>
+  </tr>
+</table>
+<h1 onclick="whenClick(event);">클릭</h1>
+</body>
+</html>

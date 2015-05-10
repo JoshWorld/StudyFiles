@@ -1,0 +1,33 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Location 객체</title>
+</head>
+<body>
+<h2>location의 주요 프로퍼티 및 메소드</h2>
+<script type="text/javascript">
+var output = '';
+for (var key in location) {
+    output += '●' + key + ': ' + location[key] + '<br>';
+}
+document.write(output);
+</script>
+
+<a href="JavaScript:location.href='http://www.naver.com'">네이버로 이동</a><br>
+<a href="JavaScript:location.replace('http://www.daum.net')">다음으로 이동 이동</a><br>
+<a href="JavaScript:location.reload();">새로고침</a>
+
+<script>
+var output = '';
+for (var key in history) {
+    output += '●' + key + ': ' + history[key] + '<br>';
+}
+document.write(output);
+
+//주요메소드
+//history.foward();
+</script>
+
+<a href="javascript:history.back();">뒤로</a>
+</body>
+</html>

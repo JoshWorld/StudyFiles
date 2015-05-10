@@ -1,0 +1,21 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>시계</title>
+<script>
+window.onload = function () {
+	var clock = document.getElementById('clock');
+    
+	window.setInterval(function () {
+        var now = new Date();
+        clock.innerHTML = now.toLocaleString();
+    }, 1000);
+};
+</script>
+
+</head>
+<body style="text-align: center">
+<div id="clock" style="width: 300px; text-align:center; margin: 10px auto; padding:10px 10px; background-color: yellow; color: blue; border:1px solid red;"></div>
+</body>
+</body>
+</html>

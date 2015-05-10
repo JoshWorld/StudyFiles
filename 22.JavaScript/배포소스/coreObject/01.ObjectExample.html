@@ -1,0 +1,20 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>자바스크립트 내장(기본)객체</title>
+</head>
+<body>
+<h2>Object의 주요 프로퍼티 및 메소드</h2>
+<script>
+var object = {property : 200};
+console.log(object.hasOwnProperty("property"));
+console.log(object.hasOwnProperty("constructor"));//Object 프로토타입객체로부터 상속
+console.log(object.propertyIsEnumerable("property"));
+console.log(object.propertyIsEnumerable("constructor"));
+
+for ( var name in object) {
+	var value = object[name];
+	console.log(name + " : " + value);	
+}
+</script>
+</html>

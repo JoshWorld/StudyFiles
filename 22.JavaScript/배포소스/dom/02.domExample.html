@@ -1,0 +1,22 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>DOM 검색 및 변경</title>
+<script>
+window.onload = function () {
+	var headers = document.getElementsByTagName('h1');
+	//headers[0].innerHTML = '제목';
+    //headers[1].innerHTML = '제목';
+    
+    for ( var i in headers) {
+    	headers[i].innerHTML = '제목입니다.';		
+	}
+};
+</script>
+
+</head>
+<body>
+<h1 id="header_1">Header1</h1>
+<h1 id="header_2">Header2</h1>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>문서 객체들에 대한 이벤트 처리</title>
+<script>
+window.onload = function () {
+    var header = document.getElementById('header');
+    // 익스플로러 9 이전버전 작동 안함
+    header.addEventListener('click', function () {
+    	this.innerHTML += '★';
+    });
+};
+</script> 
+</head>
+<body>
+<h2>표준(DOM Level 2) 이벤트 처리 모델</h2>
+<h1 id="header">클릭</h1>
+</body>
+</html>

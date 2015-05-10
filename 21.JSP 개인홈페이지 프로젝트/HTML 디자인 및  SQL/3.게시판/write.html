@@ -1,0 +1,99 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>자유게시판 - 글쓰기</title>
+<style>
+table{
+	width: 800px;
+	border-collapse: collapse;
+}
+
+th {
+	color: #ffffff;
+	background: #4374D9;
+}
+
+td {
+	text-align: left;
+	border: 1px solid #CCCCCC;
+	padding: 3px 5px;
+}
+
+td.sub {
+	text-align: right;
+	color: #CC3D3D;
+}
+
+td span{
+	padding: 2px 4px;
+	margin: 2px 2px;
+	background-color: #EAEAEA;
+	border: 1px solid silver;
+}
+
+td span.selected, td span.selected:hover{
+	background-color: #6799FF;
+	color: #ffffff;
+	border: 1px solid #008299;
+}
+
+td span a{
+	text-decoration: none;
+	color: #000000;
+}
+
+td span:hover{
+	background-color: #FF5E00;
+}
+
+td span a:hover{
+	text-decoration: none;
+	color: #ffffff;
+}
+
+textarea{
+	width: 100%;
+	height: 70px;
+}
+</style>
+</head>
+<body>
+<form action="#"  method="post">
+	<table>
+		<tr>
+			<th colspan="4">게시글 쓰기</th>
+		</tr>
+		<tr>
+			<td colspan="4" class="sub">♣ 비밀번호는 글 수정, 삭제시 필요합니다.</td>
+		</tr>
+
+		<tr>
+			<td>글제목</td>
+			<td><input type="text" name="subject" size="40"/></td>
+			<!-- 답변글 쓰기인 경우 -->
+			<!-- <td><input type="text" name="subject" value="[RE] 부모글 제목" /></td>	 -->
+			<td>비밀번호</td>
+			<td><input type="password" name="passwd"/></td>
+		</tr>
+
+		<tr>
+			<td>작성자</td>
+			<td><input type="text" name="writer" value="bangry" disabled /></td>
+			<td>이메일</td>
+			<td><input type="text" name="email" size="30" value="bangry313@gmail.com" disabled></td>
+		</tr>
+
+		<tr>
+			<td>글내용</td>
+			<td colspan="3"><textarea name="content"></textarea></td>
+		</tr>
+
+		<tr>
+			<td colspan="4" style="text-align: right;">
+				<input type="image" src="/images/bbs_input.gif">
+			</td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>

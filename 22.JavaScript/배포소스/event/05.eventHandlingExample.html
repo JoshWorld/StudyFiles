@@ -1,0 +1,18 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>문서 객체들에 대한 이벤트 처리</title>
+<script>
+window.onload = function () {
+	document.body.onclick = function (e) {
+		for (var name in e) {
+			document.body.innerHTML += '<p>' + name + ': ' + e[name] + '</p>';
+		}
+   }
+};
+</script> 
+</head>
+<body>
+<h2>event 객체 주요 프로퍼티</h2>
+</body>
+</html>

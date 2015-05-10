@@ -1,0 +1,25 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>자바스크립트 내장(기본)객체</title>
+</head>
+<body>
+<h2>Date의 주요 프로퍼티 및 메소드</h2>
+<script>
+// 현재날짜
+var today = new Date();
+console.log(today.getFullYear());
+console.log(today.getMonth() + 1);
+console.log(today.getDate());
+console.log(today.getDay());
+
+// 특정날짜 설정
+var hireDate = new Date("1987-03-02");
+console.log(hireDate.toString());
+
+//하루전 설정
+hireDate.setDate(hireDate.getDate() - 1);
+console.log(hireDate.toString());
+
+</script>
+</html>

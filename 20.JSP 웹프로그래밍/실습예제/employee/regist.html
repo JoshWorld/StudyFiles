@@ -1,0 +1,118 @@
+<html>
+<head>
+<title>KOSTA - 사원등록 화면</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+    body {
+	  font-family: '돋움' Century Gothic, Arial, Serif;
+	}
+	
+	table {
+	  border-collapse: collapse;
+	  width: 500px;
+	  margin: 30px auto;
+    }
+    
+    td {
+      background-color: #F7F7F7;
+	  border: solid 1px silver;
+	  padding: 5px 5px;
+	}	
+</style>
+</head>
+<body>
+<div>
+  <form action="some" method="post">
+    <table border="1">
+      <tr>
+        <td colspan="4" align="center">◈ 사원 등록 ◈</td>
+      </tr>
+      
+      <tr>
+        <td>사원이름</td>
+        <td>
+          <input type="text" name="firstname" size="10"> - 
+          <input type="text" name="lastname" size="15">
+        </td>
+      </tr>
+      
+	  <tr>
+	    <td>이메일</td>
+	    <td><input type="text" name="email"  size="20"/></td>
+	  </tr>
+	  
+	  <tr>
+	    <td>전화번호</td>
+	    <td>
+	      <select name='phonenumber1'>
+	        <option value='010' >010</option>
+	        <option value='011' >011</option>
+	        <option value='016' >016</option>
+	      </select> - 
+	      <input type="text" name="phonenumber2" size="4"> - 
+	      <input type="text" name="phonenumber3" size="4">
+	    </td>
+	  </tr>
+	  
+	  <tr>
+	    <td>입사일자</td>
+	    <td>
+	      <input type="text" name="hiredate" size="15"/> (예 : 2000-01-01)
+	    </td>
+	  </tr>
+	  
+	  <tr>
+	    <td>부서</td>
+	    <td>
+	      <select name='job'>
+	        <option value="10">Administration</option>
+	        <option value="20">Marketing</option>
+	        <option value="30">Purchasing</option>
+	        <option>미배정</option>
+	      </select>
+        </td>
+	  </tr>
+	  
+	  <tr>
+	    <td>상사</td>
+	    <td>
+	      <select name="manager">
+	        <option value="100">King</option>
+	        <option value="101">Kochhar</option>
+	        <option value="102">De Haan</option>
+	        <option>미배정</option>
+	      </select>
+	    </td>
+	  </tr>
+	  
+	  <tr>
+	    <td>업무</td>
+	    <td>
+	      <select name='job'>
+	        <option>IT_PROG</option>
+	        <option>AD_VP</option>
+	        <option>FG_MGR</option>
+	        <option>미배정</option>
+	      </select>
+        </td>
+	  </tr>
+	  
+	  <tr>
+	    <td>급여</td>
+	    <td>
+	      $ <input type="text" name="salary"  size="10"/>
+	    </td>
+	  </tr>
+	  
+	  <tr>
+	    <td colspan="2" align="center">
+	      <input type="submit" value="등록"/>
+	      <input type="reset" value="취소" />
+	    </td>
+	  </tr>
+	</table>
+  </form>
+</div>
+</body>
+</html>
+

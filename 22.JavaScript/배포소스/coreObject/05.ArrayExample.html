@@ -1,0 +1,74 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>자바스크립트 내장(기본)객체</title>
+</head>
+<body>
+<h2>Array의 주요 프로퍼티 및 메소드</h2>
+<script>
+var empty = [];           // 배열 리터널을 이용한 빈 배열 생성
+var array = new Array();  // 생성자를 이용한 배열 생성
+var array2 = new Array(5);// 생성자를 이용한 5개짜리 배열 생성
+
+var primes = [1, 2, 3, 4, 5]; //동일한 데이터타입
+var misc = [1.1, true, "a", {}, function(){}, []];  //서로 다른 데이터타입
+
+//배열 리터널에서 빠진 부분이 존재할 경우, 해당 부분의 원소 값은 undefined 
+var count = [1, ,3];
+
+//모든 원소 값은 undefined 
+var underfs = [,,];
+
+// 배열 원소 접근
+console.log(primes[0]); // 숫자 인덱스를 문자열로 변환하여 프로퍼티 이름으로 사용
+console.log(primes["0"]);
+
+for(var i=0; i<primes.length; i++){
+	console.log(primes[i] + "\n");
+}
+
+for(var i in primes){
+	console.log(primes[i] + "\n");
+}
+
+//delete로 배열의 특정 원소 값 삭제 
+var d = [1, 2, 3];
+delete d[1]; // 원소의 값이 undefined, 배열 사이즈가 작아지는 것 아님
+console.log(d[1]);
+
+d.length = 0; // 모든 원소 삭젝
+console.log(d[0]);
+
+// Array의 주요 메소드
+var array = [];
+array.push("red");
+array.push("green");
+array.push("blue");
+console.log(array.pop());
+console.log(array.length);
+array.unshift("blue");
+var str = array.join(",");
+console.log(str);
+
+var array = ["banna", "cherry", "apple"];
+array.sort();
+console.log(array);
+
+var array = [33, 4, 111, 222];
+array.sort();
+console.log(array);
+
+// 익명함수를 이용하여 오름차순 정렬 기준 제시
+array.sort(function(x, y){
+	return x - y;
+});
+console.log(array);
+
+var array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+var array2 = array.slice(0, 4);
+console.log(array);
+console.log(array2);
+
+
+</script>
+</html>

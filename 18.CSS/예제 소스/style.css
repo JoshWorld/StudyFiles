@@ -1,0 +1,7 @@
+/* 모든 페이지에 적용할 스타일 정의 */
+p {
+	font-family: 궁서, 돋움, serif;
+	font-size: 40pt;
+	color: red;
+	background: silver;
+}

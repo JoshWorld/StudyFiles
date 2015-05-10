@@ -1,0 +1,33 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>문서 객체들에 대한 이벤트 처리</title>
+<script>
+window.onload = function () {
+	//BOM 접근
+	console.log(document.my_form.name);
+	console.log(document.my_form.action);
+	console.log(document.my_form.method);
+	
+	document.my_form.onsubmit = function () {
+	    
+		var name = document.my_form.name.value;
+		//var name = document.forms[0].elements[0].value;
+		if(name == null || name.length == 0){
+			alert('이름을 입력하여 주세요.');
+			return false; // 기본 이벤트 핸들러 제거
+		}
+		return true;
+		//document.my_form.submit();	        
+	};
+};
+</script> 
+</head>
+<body>
+<h2>디폴트 이벤트 핸들러 제거</h2>
+<form name="my_form" action="some.jsp">
+	이름 <input type="text" name="name" /><br>
+	<input type="submit" value="제출"/>
+</form>
+</body>
+</html>

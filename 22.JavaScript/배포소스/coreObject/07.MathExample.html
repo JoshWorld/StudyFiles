@@ -1,0 +1,40 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>자바스크립트 내장(기본)객체</title>
+</head>
+<body>
+<h2>Math의 주요 프로퍼티 및 메소드</h2>
+<script>
+// Math는 생성자를 제공하지 않으며, Math는 Object 인스턴스이다.
+console.log(Math.constructor); // function Object(){[native code]}
+
+//프로퍼티
+document.write("Math.<b>E</b> = " + Math.E + "<br>");
+document.write("Math.<b>LN2</b> = " + Math.LN2 + "<br>");
+document.write("Math.<b>LN10</b> = " + Math.LN10 + "<br>");
+document.write("Math.<b>LOG2E</b> = " + Math.LOG2E + "<br>");
+document.write("Math.<b>LOG10E</b> = " + Math.LOG10E + "<br>");
+document.write("Math.<b>PI</b> = " + Math.PI + "<br>");
+document.write("Math.<b>SQRT2</b> = " + Math.SQRT2 + "<br>");
+document.write("Math.<b>SQRT1_2</b> = " + Math.SQRT1_2);
+//메소드
+document.write("-3.5의 절대값은 : " + Math.abs(-3.5) + "<br />");
+document.write("PI의 sine 값은 : " + Math.sin(Math.PI / 2) + "<br />");
+document.write("PI의 cosine 값은 : " + Math.cos(Math.PI / 2) + "<br />");
+document.write("PI의 tangent 값은 : " + Math.tan(Math.PI / 2) + "<br />");
+document.write("0.5의 arcsine 값은 : " + Math.asin(0.5) + "<br />");
+document.write("0.5의 arccosine 값은 : " + Math.acos(0.5) + "<br />");
+document.write("0.5의 arctangent 값은 : " + Math.atan(0.5) + "<br />");
+document.write("4.9의 무조건 반내림 값은 : " + Math.floor(4.9) + "<br />");
+document.write("4.1의 무조건 반올림 값은 : " + Math.ceil(4.1) + "<br />");
+document.write("10의 자연 LOG 값은 : " + Math.log(10) + "<br />");
+document.write("3과 5중에 더 큰 수는 : " + Math.max(3, 5) + "<br />");
+document.write("3과 5중에 더 작은 수는 : " + Math.min(3, 5) + "<br />");
+document.write("2의 3승(2<sup>3</sup>)은 : " + Math.pow(2, 3) + "<br />");
+document.write("4.4999의 반올림 값은 : " + Math.round(4.4999) + "<br />");
+document.write("2의 제곱근 값은 : " + Math.sqrt(2) + "<br />");
+document.write("0 ~ 1 사이의 임의의 수는 : " + Math.random() + "<br />");
+document.write("0 ~ 100 사이의 임의의 정수는 : " + Math.round(Math.random() * 100));
+</script>
+</html>

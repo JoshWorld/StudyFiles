@@ -1,0 +1,64 @@
+<html>
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Window 객체</title>
+<script type="text/javascript">
+//알림창
+function testAlert() {
+	alert("Hello! i am an \nalert box");
+}
+
+//confirm
+function testConfirm() {
+	var x;
+	var result = confirm("Press a button!");
+
+	if(result == true) {
+		x = "You pressed Ok!";
+	} else {
+		x = "You pressed Cancel!";
+	}
+
+	document.getElementById("msgConfirm").innerHTML = x;
+}
+
+function pupup() {
+	//alert(myWindow);
+	if(myWindow == undefined) {
+		myWindow = window.open("", "myWindow", "width=200, height=100");
+	} else {
+		myWindow = myWindow.close();
+	}
+}
+
+var myWindow;
+function openWin() {
+	myWindow = window.open("", "myWindow", "width=200, height=100");
+	myWindow.document.write("This is 'myWindow'");
+}
+
+function closeWin() {
+	myWindow.close();
+}
+
+function testPrompt() {
+	var x;
+	var person = prompt("Please enter your name", "My name");
+
+	if(person != null) {
+		x = "Hello " + person + "! How are you today?";
+		document.getElementById("msgPrompt").innerHTML = x;
+	}
+}
+</script>
+</head>
+<body>
+<h2>window의 주요 프로퍼티 및 메소드</h2>
+<button onclick="testAlert()">alert</button>
+	<br><button onclick="testConfirm()">confirm</button>
+	<p id="msgConfirm"></p>
+	<br><button onclick="popUpWindow.winOpen()">Open Window</button>
+	<br><button onclick="popUpWindow.winClose()">Close Window</button>
+	<br><button onclick="testPrompt()">testPrompt</button>
+	<br><p id="msgPrompt"></p>
+</html>

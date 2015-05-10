@@ -1,0 +1,29 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>DOM 생성</title>
+<script>
+window.onload = function () {
+	var elementNode = document.createElement('h1');
+	var textNode = document.createTextNode('Hello DOM');
+	
+    elementNode.appendChild(textNode);
+    document.body.appendChild(elementNode);
+    
+    // 텍스트노드를 가지지 않는 엘리먼트노드 생성
+    var imgElement = document.createElement('img');
+    imgElement.setAttribute("src", "img.gif");
+    imgElement.setAttribute("width", "100");
+    imgElement.setAttribute("height", "100");
+    
+    document.body.appendChild(imgElement);
+    
+};
+</script>
+
+</head>
+<body>
+<h2>노드 생성 및 연결</h2>
+<hr noshade="noshade">
+</body>
+</html>

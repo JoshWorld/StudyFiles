@@ -1,0 +1,30 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>문서 객체들에 대한 이벤트 처리</title>
+<script>
+window.onload = function () {
+    document.getElementById("header").onclick = function (e) {
+    	alert('header 이벤트 처리');
+    };
+    
+    document.getElementById("paragraph").onclick = function (e) {
+        alert('paragraph 이벤트 처리');
+        
+        // 이벤트 버블링 방지
+        if (e.stopPropagation) {
+            e.stopPropagation();
+        }else{//익스플로러인 경우..
+        	e.cancelBubble = true;        	        	
+        }
+    };
+};
+</script> 
+</head>
+<body>
+<h2>이벤트 버블링 방지</h2>
+<div id="header">
+	<p id="paragraph">Paragraph</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>자유게시판 - 상세보기</title>
+<style>
+table{
+	width: 800px;
+	border-collapse: collapse;
+}
+
+th {
+	color: #ffffff;
+	background: #4374D9;
+}
+
+td {
+	text-align: left;
+	border: 1px solid #CCCCCC;
+	padding: 3px 5px;
+}
+
+td.sub {
+	text-align: right;
+	color: #CC3D3D;
+}
+
+td span{
+	padding: 2px 4px;
+	margin: 2px 2px;
+	background-color: #EAEAEA;
+	border: 1px solid silver;
+}
+
+td span.selected, td span.selected:hover{
+	background-color: #6799FF;
+	color: #ffffff;
+	border: 1px solid #008299;
+}
+
+td span a{
+	text-decoration: none;
+	color: #000000;
+}
+
+td span:hover{
+	background-color: #FF5E00;
+}
+
+td span a:hover{
+	text-decoration: none;
+	color: #ffffff;
+}
+</style>
+</head>
+<body>
+<table>
+	<tr>
+		<th colspan="6">게시글 상세 보기</th>
+	</tr>
+	<tr>
+		<td>글제목</td>
+		<td colspan="3">철수 신규글입니다.</td>
+	</tr>
+	<tr>
+		<td>작성자</td>
+		<td>cheolsu</td>
+		<td>작성일</td>
+		<td>20xx-xx-xx xx:xx:xx</td>
+	</tr>
+	<tr>
+		<td>아이피</td>
+		<td>192.124.67.xxx</td>
+		<td>조 회</td>
+		<td>30</td>
+	</tr>
+
+	<tr>
+		<td colspan="4">
+			영희야 놀자!<br>
+			영희야 놀자!<br>
+			영희야 놀자!<br>
+			영희야 놀자!<br>
+			영희야 놀자!<br>
+			영희야 놀자!<br>
+			영희 바보~~~~<br>
+			</td>
+	</tr>
+	<tr>
+		<td colspan="4" class="sub">
+			<a href="list.jsp"><img src="/images/bbs_list.gif"></a>
+			<a href="write.jsp"><img src="/images/bbs_rewrite.gif"></a>
+			<!-- 본인글인 경우만 수정 메뉴 보이기 -->
+			<a href="modify.jsp"><img src="/images/bbs_modify.gif"></a>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

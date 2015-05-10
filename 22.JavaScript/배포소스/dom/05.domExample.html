@@ -1,0 +1,40 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>DOM 생성</title>
+<script>
+window.onload = function () {
+	var htmlText = '';
+	htmlText += '<select>';
+	htmlText += ' <option>JavaScript</option>';
+	htmlText += ' <option>Ajax</option>';
+	htmlText += ' <option>jQuery</option>';
+	htmlText += ' <option>Dojo</option>';
+	htmlText += '</select>';
+    
+	// innerHTML 프로퍼티를 이용한 노드 생성
+    document.body.innerHTML += htmlText;
+ 
+    document.body.innerHTML += "<img src='img.gif' width='200' height='200'>";
+    
+    var tableHtml = "<table border='1'><tr><td>내용</td></tr></table>";
+    document.body.innerHTML += tableHtml;
+    
+    var div = document.getElementById("box");
+    div.innerHTML = tableHtml;
+};
+</script>
+
+</head>
+<body>
+<h2>노드 생성 및 연결</h2>
+<hr noshade="noshade">
+
+<div id="box" style="background-color:yellow"></div>
+
+</body>
+</html>
+
+
+
+

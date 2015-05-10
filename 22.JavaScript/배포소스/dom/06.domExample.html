@@ -1,0 +1,26 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>DOM 삭제</title>
+<script>
+function remove(){
+    var content = document.getElementById('content');
+    // 자식노드 제거
+    document.body.removeChild(content);
+    
+    // 부모노드 접근 후 제거
+    //content.parentNode.removeChild(content);
+};
+</script>
+
+</head>
+<body>
+<div id="content" style="position:relative; top:5px; left:10px; width: 200px; height:100px; border: 1px solid darkgray;" onclick="remove();">
+  박스입니다.
+</div>
+</body>
+</body>
+</html>
+
+
+

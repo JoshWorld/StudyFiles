@@ -1,0 +1,51 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>DOM 검색 및 변경</title>
+<script>
+	window.onload = function() {
+		// 루트 엘리먼트 검색
+		var htmlElement = document.documentElement;
+		log("노드이름: " + htmlElement.nodeName);
+		log("노드타입: " + htmlElement.nodeType);
+		log("노드값: " + htmlElement.nodeValue);
+
+		
+		var bodyNodeList = document.getElementsByTagName("body");
+		var bodyNode = bodyNodeList.item(0);
+		log("노드태그명: " + bodyNode.tagName);
+
+		// h1 엘리먼트 목록
+		var h1List = document.getElementsByTagName("h1");
+		for ( var i = 0; i < h1List.length; i++) {
+			var h1Element = h1List.item(i);
+			log(h1Element.firstChild.nodeValue);
+		}
+		
+		// id로 엘리먼트 검색
+		var header1 = document.getElementById('header_1');
+
+		// 엘리먼트 노드객체의 속성 및 텍스드 변경
+		header1.innerHTML = '헤더입니다.';
+		header1.style.color = 'blue';
+		header1.style.background = 'yellow';
+	}
+
+	function log(msg) {
+		var viewBox = document.getElementById("viewBox");
+		if (viewBox) {
+			viewBox.innerHTML += msg + "<br/>";
+		}
+
+	}
+</script>
+
+</head>
+<body>
+	<h1 id="header_1">Header1</h1>
+	<h1 id="header_2">Header2</h1>
+	<h1 id="header_3">Header3</h1>
+	
+	<div id="viewBox" style="border: 1px dotted blue; background-color: gold"></div>
+</body>
+</html>
